@@ -1,0 +1,289 @@
+/* Tools Page Specific Styles */
+
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.page-description {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Categories Navigation */
+.categories-nav {
+    background-color: var(--bg-light);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 70px;
+    z-index: 999;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.category-tabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category-tab {
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.category-tab:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.category-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Tools Category Sections */
+.tools-category {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tools-category:last-child {
+    border-bottom: none;
+}
+
+.category-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.category-description {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+}
+
+/* Detailed Tool Cards */
+.tool-card.detailed {
+    padding: 2rem;
+}
+
+.tool-features {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.tool-features li {
+    padding: 0.5rem 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tool-features li:last-child {
+    border-bottom: none;
+}
+
+/* Tool Modal */
+.tool-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.tool-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.modal-close:hover {
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+.modal-header {
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-body p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.modal-footer {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+/* CTA Section */
+.tools-cta-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.tools-cta-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.tools-cta-section p {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.tools-cta-section .btn-primary {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.tools-cta-section .btn-primary:hover {
+    background-color: var(--bg-light);
+}
+
+/* Responsive adjustments for tools page */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .page-description {
+        font-size: 1rem;
+    }
+    
+    .category-tabs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .category-tab {
+        text-align: center;
+    }
+    
+    .category-title {
+        font-size: 1.5rem;
+    }
+    
+    .tool-card.detailed {
+        padding: 1.5rem;
+    }
+    
+    .modal-content {
+        margin: 1rem;
+        max-height: calc(100vh - 2rem);
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-nav {
+        top: 60px;
+    }
+    
+    .tools-category {
+        padding: 2.5rem 0;
+    }
+}
+
+/* Smooth scroll offset for sticky nav */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 150px;
+}
+
+/* Animation for category sections */
+.tools-category {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.tools-category.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
